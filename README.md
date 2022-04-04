@@ -1,2 +1,3 @@
-# template-vue2
-Template for Vue2
+# {{name}}
+
+{{description}}

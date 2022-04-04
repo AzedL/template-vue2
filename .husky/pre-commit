@@ -1,0 +1,16 @@
+#!/bin/sh
+
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no-install lint-staged
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "master" ]; then
+  exit 1
+fi
+
+if [ "$branch" = "test" ]; then
+  echo "Use '--no-verify' and make sure you know what you are doing!"
+  exit 1
+fi
