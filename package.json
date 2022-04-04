@@ -7,7 +7,7 @@
   "license": "MIT",
   "keywords": [],
   "scripts": {
-    "azg": "git init && az-git -n={{name}} -d='{{description}}'",
+    "azg": "git init && az-git -n={{name}}",
     "prepare": "husky install",
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
